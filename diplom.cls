@@ -1,4 +1,4 @@
-% !TeX encoding = windows-1251
+% !TeX encoding = utf8
 %% 
 %% This is file diplom.cls
 %% It is based on report.cls
@@ -8,31 +8,31 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{diplom}[2017/01/25 Provides the format for diploms]
-% Загружаем report.cls со всеми опциями, переданными в diplom
+% Р—Р°РіСЂСѓР¶Р°РµРј report.cls СЃРѕ РІСЃРµРјРё РѕРїС†РёСЏРјРё, РїРµСЂРµРґР°РЅРЅС‹РјРё РІ diplom
 \LoadClassWithOptions{report} 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Подключаем основные пакеты
+%% РџРѕРґРєР»СЋС‡Р°РµРј РѕСЃРЅРѕРІРЅС‹Рµ РїР°РєРµС‚С‹
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\input{glyphtounicode.tex} % Правильная кодировка символов в PDF
+\input{glyphtounicode.tex} % РџСЂР°РІРёР»СЊРЅР°СЏ РєРѕРґРёСЂРѕРІРєР° СЃРёРјРІРѕР»РѕРІ РІ PDF
 \pdfgentounicode=1
-%\RequirePackage{cmap} % Правильная кодировка символов в PDF (устар.)
-\RequirePackage[T2A]{fontenc} % Внутренняя кодировка TeX-а
-\RequirePackage[cp1251]{inputenc} % Кодировка файла
-\RequirePackage[english,russian]{babel} % Русификация, таблица переносов и т.п.
+%\RequirePackage{cmap} % РџСЂР°РІРёР»СЊРЅР°СЏ РєРѕРґРёСЂРѕРІРєР° СЃРёРјРІРѕР»РѕРІ РІ PDF (СѓСЃС‚Р°СЂ.)
+\RequirePackage[T2A]{fontenc} % Р’РЅСѓС‚СЂРµРЅРЅСЏСЏ РєРѕРґРёСЂРѕРІРєР° TeX-Р°
+\RequirePackage[cp1251]{inputenc} % РљРѕРґРёСЂРѕРІРєР° С„Р°Р№Р»Р°
+\RequirePackage[english,russian]{babel} % Р СѓСЃРёС„РёРєР°С†РёСЏ, С‚Р°Р±Р»РёС†Р° РїРµСЂРµРЅРѕСЃРѕРІ Рё С‚.Рї.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Настраиваем стиль заголовков
+%% РќР°СЃС‚СЂР°РёРІР°РµРј СЃС‚РёР»СЊ Р·Р°РіРѕР»РѕРІРєРѕРІ
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\RequirePackage[dotinlabels]{titletoc} % Точки в номерах разделов в содержании
-\RequirePackage[newlinetospace]{titlesec} % Опция newlinetospace заменяет \\ на пробелы в содержании
-%\titlelabel{\thetitle.\quad} % Точки в номерах разделов
-\newcommand{\TitleLabelWidth}{2cm} % Размер места под номер заголовка (заранее не известен)
+\RequirePackage[dotinlabels]{titletoc} % РўРѕС‡РєРё РІ РЅРѕРјРµСЂР°С… СЂР°Р·РґРµР»РѕРІ РІ СЃРѕРґРµСЂР¶Р°РЅРёРё
+\RequirePackage[newlinetospace]{titlesec} % РћРїС†РёСЏ newlinetospace Р·Р°РјРµРЅСЏРµС‚ \\ РЅР° РїСЂРѕР±РµР»С‹ РІ СЃРѕРґРµСЂР¶Р°РЅРёРё
+%\titlelabel{\thetitle.\quad} % РўРѕС‡РєРё РІ РЅРѕРјРµСЂР°С… СЂР°Р·РґРµР»РѕРІ
+\newcommand{\TitleLabelWidth}{2cm} % Р Р°Р·РјРµСЂ РјРµСЃС‚Р° РїРѕРґ РЅРѕРјРµСЂ Р·Р°РіРѕР»РѕРІРєР° (Р·Р°СЂР°РЅРµРµ РЅРµ РёР·РІРµСЃС‚РµРЅ)
 \titleformat{\chapter}[hang]{%
 	\filright\normalfont\Large\bfseries% The format of the whole title: label and text
-	}{\stepcounter{chapternum}% Увеличиваем независимый счетчик глав
+	}{\stepcounter{chapternum}% РЈРІРµР»РёС‡РёРІР°РµРј РЅРµР·Р°РІРёСЃРёРјС‹Р№ СЃС‡РµС‚С‡РёРє РіР»Р°РІ
 	\makebox[\TitleLabelWidth][l]{\thechapter.}% The label
 	}{0em}{}
 \titleformat{\section}
@@ -52,37 +52,37 @@
 %\titleformat{\subsubsection}
 %{\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
 
-% \makebox[2cm][l]{\thetitle.} делает номер фиксированной ширины
+% \makebox[2cm][l]{\thetitle.} РґРµР»Р°РµС‚ РЅРѕРјРµСЂ С„РёРєСЃРёСЂРѕРІР°РЅРЅРѕР№ С€РёСЂРёРЅС‹
 %\titlelabel{\makebox[2cm][l]{\thetitle.}}
-\titlespacing{\chapter}{0pt}{1em}{*3.5} % Вертикальные отбивки вокруг заголовка
+\titlespacing{\chapter}{0pt}{1em}{*3.5} % Р’РµСЂС‚РёРєР°Р»СЊРЅС‹Рµ РѕС‚Р±РёРІРєРё РІРѕРєСЂСѓРі Р·Р°РіРѕР»РѕРІРєР°
 %\titlespacing{\section}{0pt}{1em}{\aftertitleunit}
 %\titlespacing{\subsection}{0pt}{1em}{\aftertitleunit}
 %\titlespacing{\subsubsection}{0pt}{1em}{\aftertitleunit}
 
-% Создаем команду для ненумерованной главы
+% РЎРѕР·РґР°РµРј РєРѕРјР°РЅРґСѓ РґР»СЏ РЅРµРЅСѓРјРµСЂРѕРІР°РЅРЅРѕР№ РіР»Р°РІС‹
 \newcommand*{\chapternonum}[1]{\chapter*{#1}\addcontentsline{toc}{chapter}{#1}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Стиль заголовков в приложениях
+%% РЎС‚РёР»СЊ Р·Р°РіРѕР»РѕРІРєРѕРІ РІ РїСЂРёР»РѕР¶РµРЅРёСЏС…
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Пакет appendix глючит в некоторых конфигурациях
+% РџР°РєРµС‚ appendix РіР»СЋС‡РёС‚ РІ РЅРµРєРѕС‚РѕСЂС‹С… РєРѕРЅС„РёРіСѓСЂР°С†РёСЏС…
 %\usepackage[titletoc]{appendix}
 
 \AtBeginDocument{\let\oldappendix=\appendix
 	\def\appendix{%
 		%\setcounter{chapternum}{\value{chapter}}
 		\oldappendix
-		% Нумерация приложений русскими буквами
+		% РќСѓРјРµСЂР°С†РёСЏ РїСЂРёР»РѕР¶РµРЅРёР№ СЂСѓСЃСЃРєРёРјРё Р±СѓРєРІР°РјРё
 		\renewcommand{\thechapter}{\Asbuk{chapter}}
-		% Оформление заголовка приложения
+		% РћС„РѕСЂРјР»РµРЅРёРµ Р·Р°РіРѕР»РѕРІРєР° РїСЂРёР»РѕР¶РµРЅРёСЏ
 		\titleformat{\chapter}[display]%
 		{\normalfont\Large\bfseries% The format of label and text
-		}{\stepcounter{appnum}% Увеличиваем независимый счетчик приложений
+		}{\stepcounter{appnum}% РЈРІРµР»РёС‡РёРІР°РµРј РЅРµР·Р°РІРёСЃРёРјС‹Р№ СЃС‡РµС‚С‡РёРє РїСЂРёР»РѕР¶РµРЅРёР№
 		\filleft\normalfont\Large\chaptertitlename\ \thechapter% The label
 		}{0pt}{\filright}
 		\titlespacing{\chapter}{0pt}{0pt}{*3.5}
-		% Добавляем слово Приложение к записям глав в Содержании
+		% Р”РѕР±Р°РІР»СЏРµРј СЃР»РѕРІРѕ РџСЂРёР»РѕР¶РµРЅРёРµ Рє Р·Р°РїРёСЃСЏРј РіР»Р°РІ РІ РЎРѕРґРµСЂР¶Р°РЅРёРё
 %		\titlecontents{chapter}% <section-type>
 %			[0pt]% <left>
 %			{\vspace{1em}\bfseries}% <above-code>
@@ -90,7 +90,7 @@
 %			{}% <numberless-entry-format>
 %			{\hfill\contentspage}% <filler-page-format>
 			%[\vspace{2pt}]% <below-code>
-		% Добавляем слово Приложение к каждой записи в Содержании
+		% Р”РѕР±Р°РІР»СЏРµРј СЃР»РѕРІРѕ РџСЂРёР»РѕР¶РµРЅРёРµ Рє РєР°Р¶РґРѕР№ Р·Р°РїРёСЃРё РІ РЎРѕРґРµСЂР¶Р°РЅРёРё
 		\let\addcontentslineold=\addcontentsline
 		\renewcommand{\addcontentsline}[3]{\addcontentslineold{##1}{##2}{\appendixname~##3}}
 	}
@@ -98,23 +98,23 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Оформление содержания
+%% РћС„РѕСЂРјР»РµРЅРёРµ СЃРѕРґРµСЂР¶Р°РЅРёСЏ
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Содержание
+% РЎРѕРґРµСЂР¶Р°РЅРёРµ
 \AtBeginDocument{\let\oldtableofcontents=\tableofcontents
-	\renewcommand{\tableofcontents}[1][Содержание]{%
+	\renewcommand{\tableofcontents}[1][РЎРѕРґРµСЂР¶Р°РЅРёРµ]{%
 		\renewcommand{\contentsname}{#1}
 		\oldtableofcontents}
 }
 
-\RequirePackage[nottoc]{tocbibind} % Добавляем Список литературы в Содержание
-% Или добавляем следующую строку сразу после \begin{thebibliography}{9}
-%\addcontentsline{toc}{chapter}{\bibname} % Добавляем в содержание
+\RequirePackage[nottoc]{tocbibind} % Р”РѕР±Р°РІР»СЏРµРј РЎРїРёСЃРѕРє Р»РёС‚РµСЂР°С‚СѓСЂС‹ РІ РЎРѕРґРµСЂР¶Р°РЅРёРµ
+% РР»Рё РґРѕР±Р°РІР»СЏРµРј СЃР»РµРґСѓСЋС‰СѓСЋ СЃС‚СЂРѕРєСѓ СЃСЂР°Р·Сѓ РїРѕСЃР»Рµ \begin{thebibliography}{9}
+%\addcontentsline{toc}{chapter}{\bibname} % Р”РѕР±Р°РІР»СЏРµРј РІ СЃРѕРґРµСЂР¶Р°РЅРёРµ
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Заплатка для правильной работы неразрывного дефиса "~ и короткого тире "--
+%% Р—Р°РїР»Р°С‚РєР° РґР»СЏ РїСЂР°РІРёР»СЊРЅРѕР№ СЂР°Р±РѕС‚С‹ РЅРµСЂР°Р·СЂС‹РІРЅРѕРіРѕ РґРµС„РёСЃР° "~ Рё РєРѕСЂРѕС‚РєРѕРіРѕ С‚РёСЂРµ "--
 %% russianb.ldf        begin
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand*{\glue}{\nobreak\hskip\z@skip}%  NEW!!!
@@ -143,7 +143,7 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Подписи для рисунков и таблиц 
+%% РџРѕРґРїРёСЃРё РґР»СЏ СЂРёСЃСѓРЅРєРѕРІ Рё С‚Р°Р±Р»РёС† 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \RequirePackage[justification=centering, margin=2em, labelfont=bf]{caption}
@@ -153,11 +153,11 @@
 %format=rustable
 \DeclareCaptionLabelFormat{rtable}{\hfill #1~#2}
 \captionsetup[table]{labelformat=rtable, labelsep=newline, labelfont=normalfont, textfont=bf, position=above, margin=0em}
-%\intextsep=8pt % Отбивки сверху и снизу рисунка (таблицы)
+%\intextsep=8pt % РћС‚Р±РёРІРєРё СЃРІРµСЂС…Сѓ Рё СЃРЅРёР·Сѓ СЂРёСЃСѓРЅРєР° (С‚Р°Р±Р»РёС†С‹)
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Настраиваем оформление списков
+%% РќР°СЃС‚СЂР°РёРІР°РµРј РѕС„РѕСЂРјР»РµРЅРёРµ СЃРїРёСЃРєРѕРІ
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \RequirePackage{enumitem} 
@@ -168,10 +168,10 @@
 %\RequirePackage[overload]{textcase} % Some upgrade for UpperCase
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Титульная страница
+%% РўРёС‚СѓР»СЊРЅР°СЏ СЃС‚СЂР°РЅРёС†Р°
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Определяем переменные для элементов титульной страницы
+% РћРїСЂРµРґРµР»СЏРµРј РїРµСЂРµРјРµРЅРЅС‹Рµ РґР»СЏ СЌР»РµРјРµРЅС‚РѕРІ С‚РёС‚СѓР»СЊРЅРѕР№ СЃС‚СЂР°РЅРёС†С‹
 \newcommand*{\LetterHead}[1]{\gdef\@LetterHead{#1}}
 \newcommand*{\Kafedra}[1]{\gdef\@Kafedra{#1}}
 \newcommand*{\ZavName}[1]{\gdef\@ChairName{#1}}
@@ -190,32 +190,32 @@
 \newcommand*{\City}[1]{\gdef\@City{#1}}
 \newcommand*{\Year}[1]{\gdef\@Year{#1}}
 
-\newif\ifkursovaya % Флаг для курсовой
-\kursovayafalse % По умолчанию -- не курсовая
+\newif\ifkursovaya % Р¤Р»Р°Рі РґР»СЏ РєСѓСЂСЃРѕРІРѕР№
+\kursovayafalse % РџРѕ СѓРјРѕР»С‡Р°РЅРёСЋ -- РЅРµ РєСѓСЂСЃРѕРІР°СЏ
 \newcommand*{\Kursovaya}{\kursovayatrue}
 
-% Инициализируем элементы титульной страницы
-\LetterHead{МИНОБРНАУКИ РОССИИ \\
-	Федеральное государственное бюджетное образовательное\\ учреждение высшего образования\\
-	<<Ярославский государственный университет имени П.\,Г.~Демидова>>}
-\Kafedra{Кафедра теоретической информатики}
-\ZavStatus{Заведующий кафедрой,\\ д.\,ф.-м.\,н., профессор}
-\ZavName{С.\,С.~Сидоров}
-\DocumentType{\large Выпускная квалификационная работа бакалавра}
-\Title{\Large\bfseries Название дипломной работы}
-\Napr{по направлению\\ 02.03.02 Фундаментальная информатика и информационные технологии}
-\ChiefStatus{Научный руководитель\\ к.\,ф.-м.\,н., доцент}
-\ChiefName{П.\,П.~Петров}
-\AuthorStatus{Студент группы ИТ-41БО}
-\AuthorName{И.\,И.~Иванов}
-\City{Ярославль}
+% РРЅРёС†РёР°Р»РёР·РёСЂСѓРµРј СЌР»РµРјРµРЅС‚С‹ С‚РёС‚СѓР»СЊРЅРѕР№ СЃС‚СЂР°РЅРёС†С‹
+\LetterHead{РњРРќРћР‘Р РќРђРЈРљР Р РћРЎРЎРР \\
+	Р¤РµРґРµСЂР°Р»СЊРЅРѕРµ РіРѕСЃСѓРґР°СЂСЃС‚РІРµРЅРЅРѕРµ Р±СЋРґР¶РµС‚РЅРѕРµ РѕР±СЂР°Р·РѕРІР°С‚РµР»СЊРЅРѕРµ\\ СѓС‡СЂРµР¶РґРµРЅРёРµ РІС‹СЃС€РµРіРѕ РѕР±СЂР°Р·РѕРІР°РЅРёСЏ\\
+	<<РЇСЂРѕСЃР»Р°РІСЃРєРёР№ РіРѕСЃСѓРґР°СЂСЃС‚РІРµРЅРЅС‹Р№ СѓРЅРёРІРµСЂСЃРёС‚РµС‚ РёРјРµРЅРё Рџ.\,Р“.~Р”РµРјРёРґРѕРІР°>>}
+\Kafedra{РљР°С„РµРґСЂР° С‚РµРѕСЂРµС‚РёС‡РµСЃРєРѕР№ РёРЅС„РѕСЂРјР°С‚РёРєРё}
+\ZavStatus{Р—Р°РІРµРґСѓСЋС‰РёР№ РєР°С„РµРґСЂРѕР№,\\ Рґ.\,С„.-Рј.\,РЅ., РїСЂРѕС„РµСЃСЃРѕСЂ}
+\ZavName{РЎ.\,РЎ.~РЎРёРґРѕСЂРѕРІ}
+\DocumentType{\large Р’С‹РїСѓСЃРєРЅР°СЏ РєРІР°Р»РёС„РёРєР°С†РёРѕРЅРЅР°СЏ СЂР°Р±РѕС‚Р° Р±Р°РєР°Р»Р°РІСЂР°}
+\Title{\Large\bfseries РќР°Р·РІР°РЅРёРµ РґРёРїР»РѕРјРЅРѕР№ СЂР°Р±РѕС‚С‹}
+\Napr{РїРѕ РЅР°РїСЂР°РІР»РµРЅРёСЋ\\ 02.03.02 Р¤СѓРЅРґР°РјРµРЅС‚Р°Р»СЊРЅР°СЏ РёРЅС„РѕСЂРјР°С‚РёРєР° Рё РёРЅС„РѕСЂРјР°С†РёРѕРЅРЅС‹Рµ С‚РµС…РЅРѕР»РѕРіРёРё}
+\ChiefStatus{РќР°СѓС‡РЅС‹Р№ СЂСѓРєРѕРІРѕРґРёС‚РµР»СЊ\\ Рє.\,С„.-Рј.\,РЅ., РґРѕС†РµРЅС‚}
+\ChiefName{Рџ.\,Рџ.~РџРµС‚СЂРѕРІ}
+\AuthorStatus{РЎС‚СѓРґРµРЅС‚ РіСЂСѓРїРїС‹ РРў-41Р‘Рћ}
+\AuthorName{Р.\,Р.~РРІР°РЅРѕРІ}
+\City{РЇСЂРѕСЃР»Р°РІР»СЊ}
 \Year{\the\year} % this year
 
-% Создаем заготовку для блока Подпись
-%\newcommand*{\RightTitleWidth}{6cm} % Ширина правой колонки
-\newlength{\VisaWidth} % Переменная -- ширина правой колонки
-\setlength{\VisaWidth}{6cm} % Инициализируем ширину правой колонки
-\newcommand*{\SignDate}{\\[3pt]<<\rule{1cm}{0.5pt}>>\hrulefill\ \@Year~г.} % Дата
+% РЎРѕР·РґР°РµРј Р·Р°РіРѕС‚РѕРІРєСѓ РґР»СЏ Р±Р»РѕРєР° РџРѕРґРїРёСЃСЊ
+%\newcommand*{\RightTitleWidth}{6cm} % РЁРёСЂРёРЅР° РїСЂР°РІРѕР№ РєРѕР»РѕРЅРєРё
+\newlength{\VisaWidth} % РџРµСЂРµРјРµРЅРЅР°СЏ -- С€РёСЂРёРЅР° РїСЂР°РІРѕР№ РєРѕР»РѕРЅРєРё
+\setlength{\VisaWidth}{6cm} % РРЅРёС†РёР°Р»РёР·РёСЂСѓРµРј С€РёСЂРёРЅСѓ РїСЂР°РІРѕР№ РєРѕР»РѕРЅРєРё
+\newcommand*{\SignDate}{\\[3pt]<<\rule{1cm}{0.5pt}>>\hrulefill\ \@Year~Рі.} % Р”Р°С‚Р°
 \newcommand*{\SignBlock}[1]{%
    \vspace{0.5\baselineskip}
    \hbox to \textwidth{%
@@ -234,11 +234,11 @@
 	\SignDate}
 }
 
-% Структурное описание титульной страницы
+% РЎС‚СЂСѓРєС‚СѓСЂРЅРѕРµ РѕРїРёСЃР°РЅРёРµ С‚РёС‚СѓР»СЊРЅРѕР№ СЃС‚СЂР°РЅРёС†С‹
 \renewcommand*{\maketitle}{%
 \begin{titlepage}
-	% Если пакет hyperref подключен,	
-	% добавляем в свойства PDF-документа Название и Автора
+	% Р•СЃР»Рё РїР°РєРµС‚ hyperref РїРѕРґРєР»СЋС‡РµРЅ,	
+	% РґРѕР±Р°РІР»СЏРµРј РІ СЃРІРѕР№СЃС‚РІР° PDF-РґРѕРєСѓРјРµРЅС‚Р° РќР°Р·РІР°РЅРёРµ Рё РђРІС‚РѕСЂР°
 	\@ifundefined{hypersetup}{}{
 		\hypersetup{pdftitle = \@Title, %pdfsubject,
 			pdfauthor = \@AuthorName%, pdfkeywords
@@ -254,13 +254,13 @@
 	\ifkursovaya
 		\vfill
 	\else
-		%\StandardSign{<<Допустить к защите>>\\ \@ChairStatus}{\@ChairName}
-		\SignBlock{Сдано на кафедру \SignDate\\
+		%\StandardSign{<<Р”РѕРїСѓСЃС‚РёС‚СЊ Рє Р·Р°С‰РёС‚Рµ>>\\ \@ChairStatus}{\@ChairName}
+		\SignBlock{РЎРґР°РЅРѕ РЅР° РєР°С„РµРґСЂСѓ \SignDate\\
 			\@ChairStatus\\[\baselineskip]
 			\hrulefill\ \@ChairName%
 		}
 	\fi  
-	\begin{center} % Пустые строки нужны для того, чтобы при переключении шрифта изменились межстрочные интервалы
+	\begin{center} % РџСѓСЃС‚С‹Рµ СЃС‚СЂРѕРєРё РЅСѓР¶РЅС‹ РґР»СЏ С‚РѕРіРѕ, С‡С‚РѕР±С‹ РїСЂРё РїРµСЂРµРєР»СЋС‡РµРЅРёРё С€СЂРёС„С‚Р° РёР·РјРµРЅРёР»РёСЃСЊ РјРµР¶СЃС‚СЂРѕС‡РЅС‹Рµ РёРЅС‚РµСЂРІР°Р»С‹
 	    {\@DocumentType
 	    
 	    }\vspace{\baselineskip}
@@ -281,17 +281,17 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Оформление ключевых слов
+%% РћС„РѕСЂРјР»РµРЅРёРµ РєР»СЋС‡РµРІС‹С… СЃР»РѕРІ
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand*{\Keywords}[1]{%
-	Ключевые слова: \textbf{#1}
-	% Опция pdfkeywords для hyperref работает только в самом начале документа
+	РљР»СЋС‡РµРІС‹Рµ СЃР»РѕРІР°: \textbf{#1}
+	% РћРїС†РёСЏ pdfkeywords РґР»СЏ hyperref СЂР°Р±РѕС‚Р°РµС‚ С‚РѕР»СЊРєРѕ РІ СЃР°РјРѕРј РЅР°С‡Р°Р»Рµ РґРѕРєСѓРјРµРЅС‚Р°
 	%\@ifundefined{hypersetup}{}{\hypersetup{pdfkeywords={#1}}}
 	}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Счетчики для первой строки автореферата
+%% РЎС‡РµС‚С‡РёРєРё РґР»СЏ РїРµСЂРІРѕР№ СЃС‚СЂРѕРєРё Р°РІС‚РѕСЂРµС„РµСЂР°С‚Р°
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \RequirePackage{totcount}
@@ -302,45 +302,45 @@
 \let\oldbibitem=\bibitem
 \def\bibitem{\stepcounter{bibnum}\oldbibitem}
 
-% В каждой главе счетчики рисунков и таблиц обнуляются.
-% Поэтому заводим специальные счетчики для общего числа
+% Р’ РєР°Р¶РґРѕР№ РіР»Р°РІРµ СЃС‡РµС‚С‡РёРєРё СЂРёСЃСѓРЅРєРѕРІ Рё С‚Р°Р±Р»РёС† РѕР±РЅСѓР»СЏСЋС‚СЃСЏ.
+% РџРѕСЌС‚РѕРјСѓ Р·Р°РІРѕРґРёРј СЃРїРµС†РёР°Р»СЊРЅС‹Рµ СЃС‡РµС‚С‡РёРєРё РґР»СЏ РѕР±С‰РµРіРѕ С‡РёСЃР»Р°
 \newtotcounter{fignum} % Total number of figures
 \newtotcounter{tablenum} % Total number of tables
 \AtBeginDocument{%
-	% Следующие две команды должны отработать непосредственно после \begin{document}
+	% РЎР»РµРґСѓСЋС‰РёРµ РґРІРµ РєРѕРјР°РЅРґС‹ РґРѕР»Р¶РЅС‹ РѕС‚СЂР°Р±РѕС‚Р°С‚СЊ РЅРµРїРѕСЃСЂРµРґСЃС‚РІРµРЅРЅРѕ РїРѕСЃР»Рµ \begin{document}
 	\let\oldcaption=\caption
 	\def\caption{\def\floatf{figure}\ifx\floatf\@captype\stepcounter{fignum}\else\stepcounter{tablenum}\fi\oldcaption}%
 }
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Математические формулы, символы и окружения типа теорем
+%% РњР°С‚РµРјР°С‚РёС‡РµСЃРєРёРµ С„РѕСЂРјСѓР»С‹, СЃРёРјРІРѕР»С‹ Рё РѕРєСЂСѓР¶РµРЅРёСЏ С‚РёРїР° С‚РµРѕСЂРµРј
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\RequirePackage{amsmath} % Базовый пакет для математики
-\RequirePackage{amsthm}  % Окружения типа теорем
-\RequirePackage{amssymb} % Дополнительные символы и шрифты
+\RequirePackage{amsmath} % Р‘Р°Р·РѕРІС‹Р№ РїР°РєРµС‚ РґР»СЏ РјР°С‚РµРјР°С‚РёРєРё
+\RequirePackage{amsthm}  % РћРєСЂСѓР¶РµРЅРёСЏ С‚РёРїР° С‚РµРѕСЂРµРј
+\RequirePackage{amssymb} % Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ СЃРёРјРІРѕР»С‹ Рё С€СЂРёС„С‚С‹
 
-\RequirePackage{mathtools} % Дополнительные возможности для набора формул
-\providecommand\given{} % Для вертикальной черты, определяющей начало условия
-% Создаем команду для оформления множеств
+\RequirePackage{mathtools} % Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ РІРѕР·РјРѕР¶РЅРѕСЃС‚Рё РґР»СЏ РЅР°Р±РѕСЂР° С„РѕСЂРјСѓР»
+\providecommand\given{} % Р”Р»СЏ РІРµСЂС‚РёРєР°Р»СЊРЅРѕР№ С‡РµСЂС‚С‹, РѕРїСЂРµРґРµР»СЏСЋС‰РµР№ РЅР°С‡Р°Р»Рѕ СѓСЃР»РѕРІРёСЏ
+% РЎРѕР·РґР°РµРј РєРѕРјР°РЅРґСѓ РґР»СЏ РѕС„РѕСЂРјР»РµРЅРёСЏ РјРЅРѕР¶РµСЃС‚РІ
 \newcommand\SetSymbol[1][]{%
 	\nonscript\:#1\vert
 	\allowbreak \nonscript\:	\mathopen{}}
 \DeclarePairedDelimiterX\Set[1]\{\}{%
 	\renewcommand\given{\SetSymbol[\delimsize]}	#1}
-% Условная вероятность
+% РЈСЃР»РѕРІРЅР°СЏ РІРµСЂРѕСЏС‚РЅРѕСЃС‚СЊ
 \DeclarePairedDelimiterXPP\Pb[1]{\mathsf{P}}(){}{
 	\renewcommand\given{\nonscript\:\delimsize\vert\nonscript\:\mathopen{}}	#1}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Переподчиняем счетчики рисунков и формул
+%% РџРµСЂРµРїРѕРґС‡РёРЅСЏРµРј СЃС‡РµС‚С‡РёРєРё СЂРёСЃСѓРЅРєРѕРІ Рё С„РѕСЂРјСѓР»
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \RequirePackage{chngcntr}
-%\counterwithout{figure}{chapter} % Отвязываем счетчик рисунков от счетчика глав
-\counterwithout{equation}{chapter} % Отвязываем счетчик формул от счетчика глав
-\let\numberwithin=\counterwithin % Иначе \numberwithin (из amsmath) и \counterwithin могут конфликтовать
+%\counterwithout{figure}{chapter} % РћС‚РІСЏР·С‹РІР°РµРј СЃС‡РµС‚С‡РёРє СЂРёСЃСѓРЅРєРѕРІ РѕС‚ СЃС‡РµС‚С‡РёРєР° РіР»Р°РІ
+\counterwithout{equation}{chapter} % РћС‚РІСЏР·С‹РІР°РµРј СЃС‡РµС‚С‡РёРє С„РѕСЂРјСѓР» РѕС‚ СЃС‡РµС‚С‡РёРєР° РіР»Р°РІ
+\let\numberwithin=\counterwithin % РРЅР°С‡Рµ \numberwithin (РёР· amsmath) Рё \counterwithin РјРѕРіСѓС‚ РєРѕРЅС„Р»РёРєС‚РѕРІР°С‚СЊ
 
 
 
